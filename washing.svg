@@ -1,0 +1,8 @@
+<svg width="783" height="618" viewBox="0 0 783 618" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="783" height="618" fill="white"/>
+<rect id="Rectangle 1" width="783" height="618" fill="#D9D9D9"/>
+<rect id="Rectangle 2" x="220" y="120" width="330" height="379" fill="white"/>
+<line id="Line 1" x1="220.002" y1="180.5" x2="550.002" y2="181.5" stroke="black"/>
+<ellipse id="Ellipse 1" cx="385" cy="343.5" rx="116" ry="102.5" fill="#D9D9D9"/>
+<ellipse id="Ellipse 2" rx="98.5" ry="80.5" transform="matrix(-1 0 0 1 384.5 343.5)" fill="#FFFBFB"/>
+</svg>
