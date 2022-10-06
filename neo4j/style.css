@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+.top{
+    z-index: 50;
+    width:100vw;
+    height:40px;
+    /* position: absolute; */
+    background-color: #000;
+}
+
+.bottom{
+    margin-top: 300px;
+    width:100vw;
+    height:50px;
+    background-color: #000;
+}
+
+.transition{
+    flex-wrap: wrap;
+    display: flex;
+   
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+
+}
+
+.cards{
+    /* width: 30px;
+    height: 30px;
+    background-color: aquamarine; */
+ 
+    /* flex-direction: row; */
+}

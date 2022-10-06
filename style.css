@@ -143,7 +143,7 @@ fill: transparent;
 
 
 #rotate{
-    transform-origin: 42% 61%;
+    transform-origin: 30% 55%;
     animation: rotate 2s infinite forwards;
     
 }
@@ -245,3 +245,225 @@ section{
         transform: rotate(360deg);
     }
 }
+
+
+/* #left-arm{ */
+    /* transform-origin:bottom ri/ght; */
+    /* transform-origin: 12.5% 50.3%;
+
+    animation: left 1s infinite alternate;
+    margin-bottom: 100px; */
+    /* transform: translateY(430px); */
+    
+/* } */
+
+/* @keyframes left {
+   from{ */
+    /* transform-origin: 30% 109%; */
+    /* transform: rotate(-100deg); */
+    /* transform: translateY(/-10px); */
+   /* }
+
+    to{ */
+    /* transform-origin:40% 9%; */
+    /* transform: translateX(-10101101060px); */
+
+     /* transform: rotate(-150deg);
+    }
+}
+ */
+/* #right-arm{ */
+    /* transform-origin:bottom ri/ght; */
+    /* transform-origin: -12.5% -50.3%;
+
+
+    animation: right 1s infinite alternate;
+    margin-bottom: .100px; */
+    /* transform: translateY(430px); */
+/*     
+}
+
+@keyframes right {
+   from{ */
+    /* transform-origin: 30% 109%; */
+    /* transform: rotate(10deg); */
+    /* transform: translateY(/-10px);
+   }
+
+    to{ */
+    /* transform-origin:40% 9%; */
+    /* transform: translateX(-10101101060px); */
+/* 
+     transform: rotate(deg);
+    }
+} */
+
+
+#cloth-finish{
+    animation: fall 2s  ease-in-out ;
+}
+
+@keyframes fall {
+    from{
+        transform: translateY(-50%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+
+#cloth-12-1{
+    opacity: 0;
+    animation: fall1 4s 1s  ease-in-out forwards;
+}
+
+
+#cloth-12-2{
+    opacity: 0;
+    animation: fall1 3s 1s  ease-in-out forwards;
+}
+
+
+#cloth-12-3{
+    opacity: 0;
+    animation: fall1 2s 1s ease-in-out forwards;
+}
+
+@keyframes fall1 {
+    
+    from{
+        
+        transform: translateY(-50%);
+    }
+
+
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+}
+
+
+#pop-right{
+    animation: pop 3s 0.2s ease-in-out forwards;
+}
+
+@keyframes pop {
+    from{
+        opacity: 0;
+        transform: translateX(-12%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+
+    }
+}
+
+#dotted{
+    opacity: 0;
+    animation: dotted 2s 2s ease-in-out forwards;
+}
+
+@keyframes dotted {
+    from{
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0px, 0);
+
+        
+
+    }
+}
+
+
+#circle{
+    opacity: 0;
+    animation: circle 2s 6s ease-in-out forwards;
+}
+
+@keyframes circle{
+    from{
+        opacity: 0;
+        /* transform: translate3d(0, 20px, 0); */
+    }
+
+    to{
+        opacity: 1;
+       
+
+
+    }
+}
+
+
+#tick{
+    opacity: 0;
+    animation: tick 2s 7s ease-in-out forwards;
+}
+
+@keyframes tick {
+    from{
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+
+    to{
+        opacity: 1;
+       
+
+
+    }
+}
+
+#circle2{
+    opacity: 0;
+    animation: circle2 2s 4s ease-in-out forwards;
+}
+
+@keyframes circle2 {
+    from{
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+
+    to{
+        opacity: 1;
+       
+
+
+    }
+}
+
+#dot3{
+    opacity: 0;
+    animation: dot3 2s 6s ease-in-out forwards;
+}
+#dot2{
+    opacity: 0;
+    animation: dot3 2s 5s ease-in-out forwards;
+}
+#dot1{
+    opacity: 0;
+    animation: dot3 2s 4s ease-in-out forwards;
+}
+
+@keyframes dot3 {
+    from{
+        opacity: 0;
+        /* transform: translate3d(0, 10px, 0); */
+    }
+
+    to{
+        opacity: 1;
+
+    }
+}
+
