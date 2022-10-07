@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+div.block {
+  border: 1px solid #000000;
+  max-width: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+div.block::-webkit-scrollbar {
+    display: none;
+}
+ul {
+  list-style-type: none;
+}
+</style>
+</head>
+<body>
+    <div class="block" id="container">
+        <ul data-current="0">
+          <li>
+            <h3>Post 0</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+          <li>
+            <h3>Post 1</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+          <li>
+            <h3>Post 2</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+          <li>
+            <h3>Post 3</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+          <li>
+            <h3>Post 4</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+          <li>
+            <h3>Post 5</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+          <li>
+            <h3>Post 6</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+          <li>
+            <h3>Post 7</h3>
+            <img src="https://lh3.googleusercontent.com/a-/AAuE7mAEKlOpfNWWj9nu8pkQOxNbbEu_kQCFCI1z8nNFXQ=k-s32" />
+          </li>
+        </ul>
+
+
+        <script>
+            document.addEventListener( "DOMContentLoaded", function() {
+  // it's a div, that holds your news
+  // it holds ul with news in li elements
+  var div = document.getElementById( "container" );
+  div.addEventListener( "scroll", function() {
+    var max_scroll = this.scrollHeight - this.clientHeight;
+    var current_scroll = this.scrollTop;
+    var bottom = 100;
+    if ( current_scroll + bottom >= max_scroll ) {
+      var ul = document.getElementsByTagName( "ul" )[ 0 ];
+      var current = parseInt( ul.dataset.current, 10 );
+      var li = document.getElementsByTagName( "li" )[ current ];
+      var new_li = li.cloneNode( true );
+      ul.appendChild( new_li );
+      ul.dataset.current = current + 1;
+    }
+  } );
+} );
+        </script>
+</body>
+</html>

@@ -1,40 +1,122 @@
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-
+.animation{
+    position: relative;
+    height: 600px;
+    width: 100vw;
+    background-color: lightblue;
+    z-index: -2;
+}
 
 
 .top{
-    z-index: 50;
-    width:100vw;
-    height:40px;
-    /* position: absolute; */
-    background-color: #000;
+    
+    height: 60px;
+    top: 0;
+    width: 100vw;
+    background-color: rgb(0, 140, 0);
 }
 
 .bottom{
-    margin-top: 300px;
-    width:100vw;
-    height:50px;
-    background-color: #000;
+    position: absolute;
+
+    bottom: 0;
+    height: 60px;
+    width: 100vw;
+    background-color: rgb(0, 140, 0);
 }
 
-.transition{
-    flex-wrap: wrap;
+.card1{
+    z-index: -1;
+    position: absolute;
+    margin-left: 40px;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px white, 0 0 20px black;
+
+    animation: card1 15s infinite ;
+}
+
+.card2{
+    z-index: -1;
+    position: absolute;
+    margin-left: 40px;
+    
+    height: 200px;
+    width: 200px;
+    background-color: white;
+
+    margin-top: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px white, 0 0 20px black;
+
+    animation: card1 15s infinite ;
+}
+
+.flex{
     display: flex;
    
-    flex-direction: column;
-    width: 100%;
     height: 100%;
-    margin-left: 20px;
-
+    width: 100%;
 }
 
-.cards{
-    /* width: 30px;
-    height: 30px;
-    background-color: aquamarine; */
- 
-    /* flex-direction: row; */
+.card3{
+    z-index: -1;
+    position: absolute;
+    margin-left: 40px;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+
+    margin-top: 580px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px white, 0 0 20px black;
+
+    animation: card1 15s infinite ;
+} 
+
+
+@keyframes card1{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(calc(-500px*3));
+
+    }
+}
+
+@keyframes card2{
+    from{
+        transform: translateY(500px);
+    }
+    to{
+        transform: translateY(calc(-500px*1.3));
+
+    }
+}
+
+@keyframes card3{
+    0%{
+        transform: translateY(500px);
+    }
+    75%{
+        transform: translateY(calc(-500px*1.3));
+
+    }
+} 
+
+
+    
+
+.after{
+    height: 400px;
+    width: 100vw;
+    background-color: aliceblue;
 }

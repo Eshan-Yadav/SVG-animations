@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+ 
+    
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* overflow: hidden; */
+}
+.animation{
+    position: relative;
+    height: 600px;
+    width: 100vw;
+    background-color: lightblue;
+    z-index: -2;
+}
+
+
+.top{
+    height: 60px;
+    position: absolute;
+z-index: 2;
+    top: 0;
+    width: 100vw;
+    background-color: rgb(0, 140, 0);
+}
+
+.bottom{
+    position: absolute;
+
+    bottom: 0;
+    height: 60px;
+    width: 100vw;
+    background-color: rgb(0, 140, 0);
+}
+
+
+.flex{
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+    animation: card1 calc(15s*var(--i)) infinite linear;
+
+}
+
+.mai{
+    display: flex
+}
+
+.flex2{
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+    margin-left: 40px;
+    animation: card1 calc(15s*1.5) infinite linear;
+
+}
+
+@keyframes card1{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(calc(-300px*3));
+
+    }
+}
+
+.card{
+    /* z-index: -1; */
+    /* position: absolute; */
+    text-align: center;
+    color:aliceblue;
+    background-image: url(./oriental-tiles.png);
+    margin-left: 40px;
+    height: 200px;
+    width: 200px;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 0 15px white, 0 0 20px black;
+
+    animation: card1 15s infinite ;
+}
+
+
+.after{
+    height: 400px;
+    width: 100vw;
+    background-color: aliceblue;
+}
+</style>
+<body>
+    <div class="animation">
+        <div class="top"></div>
+        
+        <div class="mai">
+            <div class="flex">
+                <div class="card" style="--i:1.6;">1<br>Clothes</div>
+                <div class="card"  style="--i:1.7;">2<br>Clothes</div>
+                <div class="card"  style="--i:1.8;">3<br>Clothes</div>
+                <div class="card"  style="--i:1.6;">1<br>Clothes</div>
+                <div class="card"  style="--i:1.7;">2<br>Clothes</div>
+                <div class="card"  style="--i:2;">3<br>Clothes</div>
+       
+              </div>
+      
+              <div class="flex2">
+                  <div class="card" style="--i:1.6;">1<br>Clothes</div>
+                  <div class="card"  style="--i:1.7;">2<br>Clothes</div>
+                  <div class="card"  style="--i:1.8;">3<br>Clothes</div>
+                  <div class="card"  style="--i:1.6;">1<br>Clothes</div>
+                  <div class="card"  style="--i:1.7;">2<br>Clothes</div>
+                  <div class="card"  style="--i:2;">3<br>Clothes</div>
+                  <div class="card"  style="--i:2;">1<br>Clothes</div>
+                  <div class="card"  style="--i:2;">2<br>Clothes</div>
+                  <div class="card"  style="--i:2;">3<br>Clothes</div>
+                  <div class="card"  style="--i:2;">3<br>Clothes</div>
+                  <div class="card"  style="--i:2;">3<br>Clothes</div>
+                  <div class="card"  style="--i:2;">3<br>Clothes</div>
+         
+              </div>
+        </div>
+       
+        
+        
+        <div class="bottom"></div>
+    </div>
+    
+       <div class="after"></div>
+</body>
+</html>

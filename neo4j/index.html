@@ -4,77 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page Animation</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+.animation{
+    position: relative;
+    height: 600px;
+    width: 100vw;
+    background-color: lightblue;
+    z-index: -2;
+}
+
+
+.top{
+    height: 60px;
+    position: absolute;
+z-index: 2;
+    top: 0;
+    width: 100vw;
+    background-color: rgb(0, 140, 0);
+}
+
+.bottom{
+    position: absolute;
+
+    bottom: 0;
+    height: 60px;
+    width: 100vw;
+    background-color: rgb(0, 140, 0);
+}
+
+
+.flex{
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+    animation: card1 calc(15s*var(--i)) infinite linear;
+
+}
+
+.flex:hover,.card:hover{
+    animation-play-state:paused;
+}
+
+
+@keyframes card1{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(calc(-300px*3));
+
+    }
+}
+
+.card{
+    /* z-index: -1; */
+    /* position: absolute; */
+    margin-left: 40px;
+    height: 200px;
+    width: 200px;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 0 15px white, 0 0 20px black;
+
+    animation: card1 15s infinite ;
+}
+
+
+.after{
+    height: 400px;
+    width: 100vw;
+    background-color: aliceblue;
+}
+</style>
 <body>
-    <div class="top"></div>
-    <div class="transition">
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
-        <div class="cards"></div>
+    <div class="animation">
+        <div class="top"></div>
+    
+        <div class="flex">
+          <div class="card" style="--i:1.6;">1</div>
+          <div class="card"  style="--i:1.7;">2</div>
+          <div class="card"  style="--i:1.8;">3</div>
+          <div class="card"  style="--i:1.6;">1</div>
+          <div class="card"  style="--i:1.7;">2</div>
+          <div class="card"  style="--i:2;">3</div>
+ 
+        </div>
+        
+        
+        <div class="bottom"></div>
     </div>
     
-    <div class="bottom"></div>
-
-    <!-- <div class="sliding-customer-cards">
-        <div class="customer-card-track">
-          <a href="/users/nasa/" class="customer-card">
-            <img loading="lazy" src="/wp-content/themes/neo4jweb/v2-templates/home/assets/nasa-logo-new.svg" alt="" class="customer-logo logo-nasa">
-            <div class="copy">
-              <p>Neo4j helped NASA <strong>save millions of dollars and two years</strong> in their work on the Mission to Mars. </p>
-            </div>
-            <div class="circle circle-nasa"></div>
-            <img loading="lazy" src="/wp-content/themes/neo4jweb/v2-templates/home/assets/nasa-drawing.svg" class="drawing-nasa" alt="nasa drawing">
-          </a>
-          <a href="/case-studies/the-international-consortium-of-investigative-journalists-icij/" class="customer-card">
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/icij-logo.svg" alt="" class="customer-logo logo-icij">
-            <div class="copy">
-              <p>"[Neo4j] is <strong>a revolutionary discovery tool</strong> that's transformed our investigative journalism process."
-              </p>
-            </div>
-            <div class="circle circle-icij"></div>
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/icij-drawing.svg" class="drawing-icij" alt="icij drawing">
-          </a>
-         
-          <a href="/case-studies/boston-scientific/" class="customer-card">
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/boston-scientific-logo.png" alt="boston logo" class="customer-logo logo-boston">
-            <div class="copy">
-              <p>"Neo4j allows us to see relationships...that simply <strong>would not be possible</strong> with other tools."
-              </p>
-            </div>
-            <div class="circle circle-boston"></div>
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/boston-scientific-illustration.svg" class="drawing-boston" alt="boston drawing">
-          </a>
-          <a href="/users/nasa/" class="customer-card">
-            <img loading="lazy" src="/wp-content/themes/neo4jweb/v2-templates/home/assets/nasa-logo-new.svg" alt="nasa logo" class="customer-logo logo-nasa">
-            <div class="copy">
-              <p>Neo4j helped NASA <strong>save millions of dollars and two years</strong> in their work on the Mission to Mars. </p>
-            </div>
-            <div class="circle circle-nasa"></div>
-            <img loading="lazy" src="/wp-content/themes/neo4jweb/v2-templates/home/assets/nasa-drawing.svg" class="drawing-nasa" alt="nasa drawing">
-          </a>
-          <a href="/case-studies/the-international-consortium-of-investigative-journalists-icij/" class="customer-card">
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/icij-logo.svg" alt="icij logo" class="customer-logo logo-icij">
-            <div class="copy">
-              <p>"[Neo4j] is <strong>a revolutionary discovery tool</strong> that's transformed our investigative journalism process."
-              </p>
-            </div>
-            <div class="circle circle-icij"></div>
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/icij-drawing.svg" class="drawing-icij" alt="icij drawing">
-          </a>
-        
-          <a href="/case-studies/boston-scientific/" class="customer-card">
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/boston-scientific-logo.png" class="customer-logo logo-boston" alt="boston logo">
-            <div class="copy">
-              <p>"Neo4j allows us to see relationships...that simply <strong>would not be possible</strong> with other tools."
-              </p>
-            </div>
-            <div class="circle circle-boston"></div>
-            <img src="/wp-content/themes/neo4jweb/v2-templates/home/assets/boston-scientific-illustration.svg" class="drawing-boston" alt="boston drawing">
-          </a>
-        </div>
-      </div> -->
+       <div class="after"></div>
 </body>
 </html>
